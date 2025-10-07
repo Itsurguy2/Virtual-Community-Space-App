@@ -1,0 +1,148 @@
+/* Container */
+.add-event-form {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 480px;
+  margin: 2rem auto;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #333;
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+/* Heading */
+.add-event-form h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+/* Form groups */
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #2d3436;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border 0.2s, box-shadow 0.2s;
+  background-color: #fafafa;
+}
+
+/* Focus states */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #0078ff;
+  box-shadow: 0 0 0 3px rgba(0, 120, 255, 0.15);
+  outline: none;
+  background-color: #fff;
+}
+
+/* Textarea styling */
+textarea {
+  resize: vertical;
+}
+
+/* Error message */
+.form-error {
+  background: #ffeaea;
+  color: #d63031;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  animation: shake 0.3s ease;
+}
+
+/* Success state */
+.form-success {
+  text-align: center;
+  background: #f6fff7;
+  border: 1px solid #b2f2bb;
+  border-radius: 16px;
+  padding: 2rem;
+  color: #2d6a4f;
+  animation: fadeIn 0.4s ease;
+}
+
+.success-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Form actions */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Buttons */
+.btn-cancel,
+.btn-submit {
+  padding: 0.6rem 1.25rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.1s ease;
+}
+
+.btn-cancel {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.btn-cancel:hover {
+  background-color: #d6d6d6;
+}
+
+.btn-submit {
+  background-color: #0078ff;
+  color: white;
+}
+
+.btn-submit:hover {
+  background-color: #005fcc;
+  transform: translateY(-1px);
+}
+
+.btn-submit:disabled {
+  background-color: #a0c4ff;
+  cursor: not-allowed;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}

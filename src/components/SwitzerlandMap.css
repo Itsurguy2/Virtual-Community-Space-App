@@ -1,0 +1,105 @@
+.switzerland-map {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.map-svg {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.country-outline {
+  fill: #f0f0f0;
+  stroke: #667eea;
+  stroke-width: 1.5;
+  transition: fill 0.3s;
+}
+
+.country-outline:hover {
+  fill: #e8e8e8;
+  filter: drop-shadow(0 0 5px rgba(102, 126, 234, 0.3));
+}
+
+.location-marker {
+  fill: #667eea;
+  stroke: white;
+  stroke-width: 1;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.location-marker:hover {
+  fill: #764ba2;
+  r: 6;
+  filter: drop-shadow(0 0 10px rgba(118, 75, 162, 1)) 
+          drop-shadow(0 0 20px rgba(118, 75, 162, 0.6));
+  animation: pulse-glow 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px rgba(118, 75, 162, 1)) 
+            drop-shadow(0 0 20px rgba(118, 75, 162, 0.6));
+  }
+  50% {
+    filter: drop-shadow(0 0 15px rgba(118, 75, 162, 1)) 
+            drop-shadow(0 0 30px rgba(118, 75, 162, 0.8));
+  }
+}
+.location-marker.selected {
+  fill: #ff6b6b;
+  r: 5.5;
+  stroke: #ff6b6b;
+  stroke-width: 2;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.location-label {
+  font-size: 5px;
+  font-weight: bold;
+  fill: #333;
+  text-anchor: middle;
+  cursor: pointer;
+  pointer-events: none;
+  user-select: none;
+}
+
+.location-marker.selected + .location-label {
+  fill: #ff6b6b;
+  font-weight: 900;
+}
+
+/* Mobile touch improvements */
+@media (max-width: 768px) {
+  .location-marker {
+    r: 5;
+  }
+
+  .location-marker:hover,
+  .location-marker:active {
+    r: 7;
+  }
+
+  .location-label {
+    font-size: 6px;
+  }
+}
+
+@media (hover: none) {
+  /* For touch devices */
+  .location-marker:active {
+    fill: #764ba2;
+    r: 7;
+  }
+}

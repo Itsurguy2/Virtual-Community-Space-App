@@ -1,0 +1,230 @@
+.all-events {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px 20px;
+}
+
+.all-events-header {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  text-align: center;
+  color: white;
+}
+
+.all-events-header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.events-subtitle {
+  font-size: 1.3rem;
+  opacity: 0.9;
+}
+
+.back-button {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 30px;
+  transition: all 0.3s;
+  backdrop-filter: blur(10px);
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(-5px);
+}
+
+.events-filters {
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 25px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  flex-wrap: wrap;
+}
+
+.search-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 250px;
+}
+
+.search-section label {
+  font-weight: 600;
+  color: #666;
+  white-space: nowrap;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+.date-filter-section,
+.date-input-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.date-filter-section label,
+.date-input-section label {
+  font-weight: 600;
+  color: #666;
+  white-space: nowrap;
+}
+
+.date-filter-section select {
+  padding: 10px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  min-width: 150px;
+}
+
+.date-filter-section select:hover {
+  border-color: #667eea;
+}
+
+.date-filter-section select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.date-input {
+  padding: 10px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  min-width: 150px;
+}
+
+.date-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.filter-section,
+.sort-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-section label,
+.sort-section label {
+  font-weight: 600;
+  color: #666;
+  white-space: nowrap;
+}
+
+.filter-section select,
+.sort-section select {
+  padding: 10px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  min-width: 180px;
+}
+
+.filter-section select:hover,
+.sort-section select:hover {
+  border-color: #667eea;
+}
+
+.filter-section select:focus,
+.sort-section select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.result-count {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.events-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+.loading-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+@media (max-width: 968px) {
+  .events-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .search-section,
+  .filter-section,
+  .sort-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .search-input,
+  .filter-section select,
+  .sort-section select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .all-events-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+}
